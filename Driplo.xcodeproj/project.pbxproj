@@ -8,17 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1945B6242B2F8AFD0075C1B7 /* DriploApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945B6232B2F8AFD0075C1B7 /* DriploApp.swift */; };
-		1945B6262B2F8AFD0075C1B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945B6252B2F8AFD0075C1B7 /* ContentView.swift */; };
 		1945B6282B2F8AFF0075C1B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1945B6272B2F8AFF0075C1B7 /* Assets.xcassets */; };
 		1945B62B2B2F8AFF0075C1B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1945B62A2B2F8AFF0075C1B7 /* Preview Assets.xcassets */; };
+		1945B6332B2F919C0075C1B7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945B6322B2F919C0075C1B7 /* LoadingView.swift */; };
+		1945B6372B2F9E170075C1B7 /* FirstTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945B6362B2F9E170075C1B7 /* FirstTimeView.swift */; };
+		1945B63B2B2FBE9C0075C1B7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945B63A2B2FBE9C0075C1B7 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1945B6202B2F8AFD0075C1B7 /* Driplo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Driplo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1945B6232B2F8AFD0075C1B7 /* DriploApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriploApp.swift; sourceTree = "<group>"; };
-		1945B6252B2F8AFD0075C1B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1945B6272B2F8AFF0075C1B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1945B62A2B2F8AFF0075C1B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1945B6322B2F919C0075C1B7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1945B6342B2F94A30075C1B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1945B6362B2F9E170075C1B7 /* FirstTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeView.swift; sourceTree = "<group>"; };
+		1945B63A2B2FBE9C0075C1B7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				1945B6232B2F8AFD0075C1B7 /* DriploApp.swift */,
-				1945B6252B2F8AFD0075C1B7 /* ContentView.swift */,
+				1945B6382B2FBD890075C1B7 /* Views */,
 				1945B6272B2F8AFF0075C1B7 /* Assets.xcassets */,
+				1945B6342B2F94A30075C1B7 /* Info.plist */,
 				1945B6292B2F8AFF0075C1B7 /* Preview Content */,
 			);
 			path = Driplo;
@@ -65,6 +71,16 @@
 				1945B62A2B2F8AFF0075C1B7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1945B6382B2FBD890075C1B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1945B6322B2F919C0075C1B7 /* LoadingView.swift */,
+				1945B6362B2F9E170075C1B7 /* FirstTimeView.swift */,
+				1945B63A2B2FBE9C0075C1B7 /* HomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1945B6262B2F8AFD0075C1B7 /* ContentView.swift in Sources */,
 				1945B6242B2F8AFD0075C1B7 /* DriploApp.swift in Sources */,
+				1945B63B2B2FBE9C0075C1B7 /* HomeView.swift in Sources */,
+				1945B6372B2F9E170075C1B7 /* FirstTimeView.swift in Sources */,
+				1945B6332B2F919C0075C1B7 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +293,11 @@
 				DEVELOPMENT_TEAM = SJRUCMU4G5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Driplo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Driplo;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -311,11 +329,11 @@
 				DEVELOPMENT_TEAM = SJRUCMU4G5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Driplo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Driplo;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
