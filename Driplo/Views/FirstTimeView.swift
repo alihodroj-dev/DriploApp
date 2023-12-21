@@ -15,6 +15,7 @@ enum WeightUnit: String, Identifiable, CaseIterable {
 
 struct FirstTimeView: View {
     
+    // View Properties
     @State private var weight: String = ""
     @State private var selectedUnit: WeightUnit = .KG
     @FocusState private var weightFocused: Bool
@@ -59,7 +60,7 @@ struct FirstTimeView: View {
                         .keyboardType(.numberPad)
                         .focused($weightFocused)
                         // Unit Picker
-                        Picker("", selection: $selectedUnit) {
+                        Picker("Unit", selection: $selectedUnit) {
                             ForEach(WeightUnit.allCases) { unit in
                                 Text(unit.rawValue)
                             }
@@ -69,9 +70,15 @@ struct FirstTimeView: View {
                     }.padding(.horizontal, 30)
                     // Submit
                     Button("Calculate") {
-                        UserDefaults.standard.set(weight, forKey: "KLEB")
-                        UserDefaults.standard.set(selectedUnit.rawValue, forKey: "UNIT")
-                        goHome = true
+                        // Checking if textfield isnt empty and doesnt contain characters
+                        if (!weight.isEmpty && weight.rangeOfCharacter(from: CharacterSet.letters) == nil) {
+                            // initializing UserDefaults
+                            Helper.HELPER.initializeDate(Int(weight)!, selectedUnit)
+                            UserDefaults.standard.set(true, forKey: "LAUNCHED_BEFORE")
+                            // going to HomeView
+                            goHome = true
+                        }
+                        
                     }
                     .frame(width: 100, height: 35)
                     .background { RoundedRectangle(cornerRadius: 12).foregroundStyle(.white) }

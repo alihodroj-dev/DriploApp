@@ -13,6 +13,8 @@
 		1945B6332B2F919C0075C1B7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945B6322B2F919C0075C1B7 /* LoadingView.swift */; };
 		1945B6372B2F9E170075C1B7 /* FirstTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945B6362B2F9E170075C1B7 /* FirstTimeView.swift */; };
 		1945B63B2B2FBE9C0075C1B7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945B63A2B2FBE9C0075C1B7 /* HomeView.swift */; };
+		1945B63E2B2FD0730075C1B7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945B63D2B2FD0730075C1B7 /* HomeViewModel.swift */; };
+		1945B6402B30FC430075C1B7 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945B63F2B30FC430075C1B7 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1945B6342B2F94A30075C1B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1945B6362B2F9E170075C1B7 /* FirstTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeView.swift; sourceTree = "<group>"; };
 		1945B63A2B2FBE9C0075C1B7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1945B63D2B2FD0730075C1B7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1945B63F2B30FC430075C1B7 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				1945B6232B2F8AFD0075C1B7 /* DriploApp.swift */,
+				1945B63F2B30FC430075C1B7 /* Helper.swift */,
 				1945B6382B2FBD890075C1B7 /* Views */,
+				1945B63C2B2FD05E0075C1B7 /* ViewModels */,
 				1945B6272B2F8AFF0075C1B7 /* Assets.xcassets */,
 				1945B6342B2F94A30075C1B7 /* Info.plist */,
 				1945B6292B2F8AFF0075C1B7 /* Preview Content */,
@@ -81,6 +87,14 @@
 				1945B63A2B2FBE9C0075C1B7 /* HomeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1945B63C2B2FD05E0075C1B7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1945B63D2B2FD0730075C1B7 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +170,9 @@
 				1945B6242B2F8AFD0075C1B7 /* DriploApp.swift in Sources */,
 				1945B63B2B2FBE9C0075C1B7 /* HomeView.swift in Sources */,
 				1945B6372B2F9E170075C1B7 /* FirstTimeView.swift in Sources */,
+				1945B63E2B2FD0730075C1B7 /* HomeViewModel.swift in Sources */,
 				1945B6332B2F919C0075C1B7 /* LoadingView.swift in Sources */,
+				1945B6402B30FC430075C1B7 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

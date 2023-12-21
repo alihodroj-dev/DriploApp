@@ -9,14 +9,17 @@ import SwiftUI
 
 struct LoadingView: View {
     
-    // States
-    
     var body: some View {
         // Main Container
         ZStack {
-            FirstTimeView()
+            // Checking for first app launch
+            if(UserDefaults.standard.bool(forKey: "LAUNCHED_BEFORE")) {
+                HomeView()
+            } else {
+                FirstTimeView()
+            }
+            // Animation
             LoadingAnimation()
-            
         }
     }
 }
