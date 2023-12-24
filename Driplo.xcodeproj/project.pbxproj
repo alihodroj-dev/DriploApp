@@ -15,6 +15,7 @@
 		1945B63B2B2FBE9C0075C1B7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945B63A2B2FBE9C0075C1B7 /* HomeView.swift */; };
 		1945B63E2B2FD0730075C1B7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945B63D2B2FD0730075C1B7 /* HomeViewModel.swift */; };
 		1945B6402B30FC430075C1B7 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1945B63F2B30FC430075C1B7 /* Helper.swift */; };
+		19DB777F2B34A36800916F05 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB777E2B34A36800916F05 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1945B63A2B2FBE9C0075C1B7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1945B63D2B2FD0730075C1B7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1945B63F2B30FC430075C1B7 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		19DB777E2B34A36800916F05 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				1945B6322B2F919C0075C1B7 /* LoadingView.swift */,
 				1945B6362B2F9E170075C1B7 /* FirstTimeView.swift */,
 				1945B63A2B2FBE9C0075C1B7 /* HomeView.swift */,
+				19DB777E2B34A36800916F05 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19DB777F2B34A36800916F05 /* SettingsView.swift in Sources */,
 				1945B6242B2F8AFD0075C1B7 /* DriploApp.swift in Sources */,
 				1945B63B2B2FBE9C0075C1B7 /* HomeView.swift in Sources */,
 				1945B6372B2F9E170075C1B7 /* FirstTimeView.swift in Sources */,

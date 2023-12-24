@@ -34,24 +34,30 @@ struct HomeView: View {
                     let components = Calendar.current.dateComponents([.day], from: Date.now)
                     UserDefaults.standard.setValue(Calendar.current.date(from: components), forKey: "LAST_UPDATED")
                 }
+                // noti
+                //Helper.HELPER.initializeNotification()
             }
             .safeAreaInset(edge: .bottom) {
                 BottomBar(vm)
             }
             .safeAreaInset(edge: .top) {
-                TopBar()
+                TopBar(vm)
+            }
+            .navigationDestination(isPresented: $vm.goToSettingsView) {
+                SettingsView()
             }
         }
     }
 }
 
 @ViewBuilder
-func TopBar() -> some View {
+func TopBar(_ vm: HomeViewModel) -> some View {
     
     // View's Color
     let color: Color = .main
     
     HStack(spacing: 10) {
+        Spacer()
         // Date
         Text(Date.now, format: .dateTime.day().month())
             .font(.title2)
@@ -67,13 +73,13 @@ func TopBar() -> some View {
         //                .foregroundStyle(color)
         //        }
         // Settings
-        Button {
-            // todo
-        } label: {
-            Image(systemName: "gearshape.fill")
-                .font(.title2)
-                .foregroundStyle(color)
-        }
+//        Button {
+//            vm.goToSettingsView = true
+//        } label: {
+//            Image(systemName: "gearshape.fill")
+//                .font(.title2)
+//                .foregroundStyle(color)
+//        }
     }
     .frame(maxWidth: .infinity)
     .padding(.vertical)

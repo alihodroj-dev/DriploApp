@@ -20,6 +20,7 @@ class HomeViewModel: ObservableObject {
     @Published var dailyGoal: Int
     @Published var lastUpdated: Date
     @Published var selectedCup: String = "100"
+    @Published var goToSettingsView: Bool = false
     
     init() {
         let UD = UserDefaults.standard

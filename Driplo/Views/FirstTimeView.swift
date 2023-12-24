@@ -72,6 +72,7 @@ struct FirstTimeView: View {
                     Button("Calculate") {
                         // Checking if textfield isnt empty and doesnt contain characters
                         if (!weight.isEmpty && weight.rangeOfCharacter(from: CharacterSet.letters) == nil) {
+                            Helper.HELPER.initializeNotification()
                             // initializing UserDefaults
                             Helper.HELPER.initializeDate(Int(weight)!, selectedUnit)
                             UserDefaults.standard.set(true, forKey: "LAUNCHED_BEFORE")
@@ -85,6 +86,10 @@ struct FirstTimeView: View {
                     .foregroundStyle(.main)
                     .padding()
                 }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                    .onAppear {
+                        // intializing notifications
+                        Helper.HELPER.askForPermissions()
+                    }
             }.navigationDestination(isPresented: $goHome) {
                 HomeView().navigationBarBackButtonHidden()
             }
